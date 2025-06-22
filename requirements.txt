@@ -1,10 +1,12 @@
+# requirements.txt
+
 # --- Core Application Libraries ---
 fastapi
-uvicorn[standard]
+uvicorn  # <<< THIS IS THE FIX
 pydantic
 requests
 beautifulsoup4
-pandas  # <<< ADD THIS LINE
+pandas
 
 # --- NLP & Machine Learning Libraries (with pinned versions) ---
 numpy==1.26.4
