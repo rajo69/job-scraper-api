@@ -13,8 +13,9 @@ COPY requirements.txt .
 # Using --no-cache-dir makes the image smaller
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Download the NLTK data during the build process (Corrected Method)
-RUN python -m nltk.downloader punkt_tab stopwords
+# 5. Download the NLTK data during the build process (The Bulletproof Method)
+# This explicitly tells NLTK where to download the data inside the container.
+RUN python -c "import nltk; nltk.download('punkt_tab', download_dir='/usr/share/nltk_data'); nltk.download('stopwords', download_dir='/usr/share/nltk_data')"
 
 # 6. Copy your application code into the container
 COPY . .
