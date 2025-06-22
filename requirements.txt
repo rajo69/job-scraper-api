@@ -4,6 +4,7 @@ uvicorn[standard]
 pydantic
 requests
 beautifulsoup4
+pandas  # <<< ADD THIS LINE
 
 # --- NLP & Machine Learning Libraries (with pinned versions) ---
 numpy==1.26.4
