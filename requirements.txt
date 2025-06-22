@@ -1,0 +1,18 @@
+# --- Core Application Libraries ---
+fastapi
+uvicorn[standard]
+pydantic
+requests
+beautifulsoup4
+
+# --- NLP & Machine Learning Libraries (with pinned versions) ---
+numpy==1.26.4
+spacy==3.7.4
+thinc==8.2.3
+rake-nltk
+textblob
+scikit-learn
+PyPDF2
+
+# --- spaCy Model (Direct URL Installation) ---
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
