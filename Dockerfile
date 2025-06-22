@@ -13,9 +13,8 @@ COPY requirements.txt .
 # Using --no-cache-dir makes the image smaller
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Download the NLTK data during the build process
-# This "bakes" the data into the container image
-RUN python -c "import nltk; nltk.download('punkt_tab'); nltk.download('stopwords')"
+# 5. Download the NLTK data during the build process (Corrected Method)
+RUN python -m nltk.downloader punkt_tab stopwords
 
 # 6. Copy your application code into the container
 COPY . .
